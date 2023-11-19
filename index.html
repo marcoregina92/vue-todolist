@@ -13,7 +13,7 @@
     <div id="app">
         <h1>Cose da fare</h1>
         <ul>
-            <li v-for="(element, i) in toDo" :key="i"> {{!toDo[i].done ? toDo[i].text : "Fatto &checkmark;" }}</li>
+            <li v-for="(element, i) in toDo" :key="i" :class="!toDo[i].done ? '' : 'through'"> {{toDo[i].text}}</li>
         </ul>
     </div>
 

@@ -19,3 +19,7 @@ h1 {
 li {
     margin-bottom: 10px;
 }
+
+.through {
+    text-decoration: line-through;
+}
