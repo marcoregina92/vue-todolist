@@ -11,7 +11,10 @@
 <body>
 
     <div id="app">
-        {{ message }}
+        <h1>Cose da fare</h1>
+        <ul>
+            <li v-for="(element, i) in toDo" :key="i"> {{ element.text }}</li>
+        </ul>
     </div>
 
 
