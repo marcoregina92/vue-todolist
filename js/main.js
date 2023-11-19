@@ -15,7 +15,7 @@ const { createApp } = Vue
             },
             {
                 text: "Suonare la batteria",
-                done: false
+                done: true
             },
             {
                 text: "Ascoltare l'ultimo album di Calcutta",
@@ -25,7 +25,6 @@ const { createApp } = Vue
                 text: "Pagare la luce",
                 done: false
             },
-
         ]
       }
     }
