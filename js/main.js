@@ -16,7 +16,7 @@ createApp({
                 },
                 {
                     text: "Suonare la batteria",
-                    done: false
+                    done: true
                 },
                 {
                     text: "Ascoltare l'ultimo album di Calcutta",
@@ -59,8 +59,11 @@ createApp({
                 this.inputError = false;
 
             }
+        },
 
-
+        addCheck(i) {
+            console.log("check", i);
+            this.toDo[i].done = !this.toDo[i].done
         }
 
 
