@@ -30,6 +30,15 @@ const { createApp } = Vue
     },
     methods: {
 
+        deleteElement(i) {
+            console.log("cancella", i);
+            // Rimuovo l'elemento tramite l'utilizzo del metodo .splice: il primo argomento (i) 
+            // si riferisce dove vogliamo lavorare. Il secondo invece si riferisce
+            // a quanti argomenti vogliamo eliminare (1)
+            this.toDo.splice(i, 1);
+
+        }
+
 
 
     },
