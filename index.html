@@ -22,8 +22,8 @@
             </li>
         </ul>
 
-        <input type="text">
-        <button>Aggiungi nota</button>
+        <input v-model="userInput" type="text">
+        <button @click="addElement(i)">Aggiungi nota</button>
     </div>
 
 

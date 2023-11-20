@@ -3,7 +3,7 @@ const { createApp } = Vue
   createApp({
     data() {
       return {
-
+        userInput: "",
         toDo : [
             {
                 text: "Fare la spesa",
@@ -37,6 +37,20 @@ const { createApp } = Vue
             // a quanti argomenti vogliamo eliminare (1)
             this.toDo.splice(i, 1);
 
+        },
+
+        addElement() {
+           console.log(this.userInput); 
+           
+        //    Aggiungo il nuovo oggetto 
+           const newElement = {
+            text: this.userInput,
+            done: false
+           };
+
+           this.toDo.push(newElement);
+
+           this.userInput = "";
         }
 
 
