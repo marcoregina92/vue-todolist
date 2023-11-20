@@ -16,6 +16,7 @@
         <ul>
             <!-- Stampo array in pagina tramite ciclo v-for -->
             <li v-for="(element, i) in toDo" :class="{through: element.done}">
+                
                  {{ element.text }}
                  <!-- Creo un pulsante di delete  -->
                  <button @click="deleteElement(i)"> X </button>
@@ -24,6 +25,7 @@
 
         <input v-model="userInput" type="text">
         <button @click="addElement(i)">Aggiungi nota</button>
+        <p v-if="inputError">Devi inserire almeno 2 caratteri</p>
     </div>
 
 

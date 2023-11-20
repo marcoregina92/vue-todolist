@@ -1,32 +1,33 @@
 const { createApp } = Vue
 
-  createApp({
+createApp({
     data() {
-      return {
-        userInput: "",
-        toDo : [
-            {
-                text: "Fare la spesa",
-                done: false
-            },
-            {
-                text: "Finire gli esercizi",
-                done: true
-            },
-            {
-                text: "Suonare la batteria",
-                done: true
-            },
-            {
-                text: "Ascoltare l'ultimo album di Calcutta",
-                done: false
-            },
-            {
-                text: "Pagare la luce",
-                done: false
-            },
-        ]
-      }
+        return {
+            userInput: "",
+            inputError: false,
+            toDo: [
+                {
+                    text: "Fare la spesa",
+                    done: false
+                },
+                {
+                    text: "Finire gli esercizi",
+                    done: false
+                },
+                {
+                    text: "Suonare la batteria",
+                    done: false
+                },
+                {
+                    text: "Ascoltare l'ultimo album di Calcutta",
+                    done: false
+                },
+                {
+                    text: "Pagare la luce",
+                    done: false
+                },
+            ]
+        }
     },
     methods: {
 
@@ -40,17 +41,26 @@ const { createApp } = Vue
         },
 
         addElement() {
-           console.log(this.userInput); 
-           
-        //    Aggiungo il nuovo oggetto 
-           const newElement = {
-            text: this.userInput,
-            done: false
-           };
+            console.log(this.userInput);
 
-           this.toDo.push(newElement);
+            if (this.userInput.length < 2) {
+                this.inputError = true;
+            } else {
+                //    Aggiungo il nuovo oggetto 
+                const newElement = {
+                    text: this.userInput,
+                    done: false
+                };
+                this.toDo.push(newElement);
 
-           this.userInput = "";
+
+                // reset 
+                this.userInput = "";
+                this.inputError = false;
+
+            }
+
+
         }
 
 
@@ -59,4 +69,4 @@ const { createApp } = Vue
     mounted() {
         console.log("Pagina caricata")
     }
-  }).mount('#app')
+}).mount('#app')
