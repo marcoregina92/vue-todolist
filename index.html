@@ -13,8 +13,12 @@
     <div id="app">
         <h1>Cose da fare</h1>
         <ul>
-            <li v-for="(element, i) in toDo" :key="i" :class="!toDo[i].done ? '' : 'through'"> {{toDo[i].text}}</li>
+            <!-- Stampo array in pagina tramite ciclo v-for -->
+            <li v-for="element in toDo" :class="element.done ? 'through' : '' "> {{ element.text }}</li>
         </ul>
+
+        <input type="text">
+        <button>Aggiungi nota</button>
     </div>
 
 

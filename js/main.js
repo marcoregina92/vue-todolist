@@ -11,7 +11,7 @@ const { createApp } = Vue
             },
             {
                 text: "Finire gli esercizi",
-                done: false
+                done: true
             },
             {
                 text: "Suonare la batteria",
@@ -27,5 +27,13 @@ const { createApp } = Vue
             },
         ]
       }
+    },
+    methods: {
+
+
+
+    },
+    mounted() {
+        console.log("Pagina caricata")
     }
   }).mount('#app')
